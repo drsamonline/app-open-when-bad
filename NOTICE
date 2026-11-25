@@ -1,0 +1,34 @@
+NOTICE
+======
+
+Open when it is bad — https://github.com/drsamonline/app-open-when-bad
+Copyright 2026 Dr Sohil Momin. Licensed under PolyForm Noncommercial 1.0.0 (see LICENSE).
+
+Third-party components
+----------------------
+
+None. This app has no third-party dependency and no CDN.
+
+Vendored from this project's own kits (same licence, same author), copied verbatim on
+25/11/2026:
+
+- web-kit 0.1.0 — docs/play/web-kit.js — the offline shell, storage helpers and PWA registration
+- export-kit 1.0.0 — docs/play/export-kit.js — Blob download, used to write the printable card
+
+Neither kit is modified. Neither makes a network request.
+
+What this app is not
+--------------------
+
+It is not a crisis service, it cannot tell whether anyone is in danger, and it does not assess risk,
+triage, diagnose or give medical advice. It holds a plan the person wrote and shows one grounding
+step at a time. It does not replace a crisis line, a clinician, or another person who can be present.
+
+Crisis numbers
+--------------
+
+Two numbers ship as a starting point, both labelled in the app as bundled and to be checked for the
+person's state: Tele-MANAS on 14416 and the national emergency number 112 (India). The app does not
+assert that any number is current or correct, and a number the person types is stored exactly as
+typed and marked "as entered by you". If you fork this app for another region, check the numbers
+against the official source before shipping them.

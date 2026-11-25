@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open when it is bad — one step, and your own plan</title>
+<meta name="description" content="One grounding step at a time, and the safety plan you wrote in a calm moment — openable in one action, offline, with no login. Not a crisis service.">
+<meta name="theme-color" content="#101418">
+<style>
+  :root{--bg:#f6f5f2;--panel:#fff;--ink:#14181d;--muted:#5d666f;--line:#d9d6cf;--accent:#1f4a6b;--crisis:#7a1f2f}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+  main{max-width:740px;margin:0 auto;padding:44px 20px 64px}
+  h1{font-size:32px;line-height:1.15;letter-spacing:-.02em;margin:0 0 10px}
+  .lede{font-size:18px;color:var(--muted);margin:0 0 24px}
+  .cta{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:11px}
+  .crisis{margin:26px 0 0;padding:14px 16px;border:2px solid var(--crisis);border-radius:12px;background:#fdf5f6;color:#5e1626;font-size:15px;font-weight:600}
+  .crisis a{color:#5e1626;font-weight:700}
+  .status{margin:22px 0;padding:14px 16px;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;background:var(--panel);font-size:14px}
+  .status b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:4px}
+  h2{font-size:17px;margin:28px 0 8px}
+  ul{padding-left:20px}li{margin:5px 0}
+  code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:13px;background:#eeede9;padding:1px 5px;border-radius:4px}
+  table{border-collapse:collapse;width:100%;font-size:14px;margin-top:8px}
+  th,td{text-align:left;border-bottom:1px solid var(--line);padding:7px 8px;vertical-align:top}
+  th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+  footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+  a{color:var(--accent)}
+</style>
+</head>
+<body>
+<main>
+  <h1>Open when it is bad</h1>
+  <p class="lede">One grounding step at a time, and the plan you wrote in a calm moment — one action away, offline, with no login
+  and nothing to remember.</p>
+
+  <a class="cta" href="play/index.html">Open it</a>
+
+  <p class="crisis">This is not a crisis service, and it cannot tell whether you are in danger. If you are in danger now, call
+  emergency services (112 in India) or a crisis line you trust — Tele-MANAS is on 14416. Build the plan with a therapist or
+  someone you trust if you can.</p>
+
+  <div class="status">
+    <b>Status</b>
+    Built and working offline: a nine-step grounding script that opens on step one with nothing to fill in; a plan you write once
+    (warning signs, what helps, what to say, who to call) that opens in <strong>one action</strong> with no login, no PIN and no
+    network; contacts stored exactly as typed and dialable; a printable card that works without the app.
+    <br><b>Release</b>: Windows EXE, Android APK and Linux binary, built from this source in CI — <a href="https://github.com/drsamonline/app-open-when-bad/releases/tag/app-latest">app-latest</a>.
+    <br><b>Not built</b>: anything that watches, scores, reminds or assesses. That is deliberate — a streak, a reminder or a risk
+    score would all be a way for the app to fail you at the moment you need it.
+  </div>
+
+  <h2>What it does</h2>
+  <ul>
+    <li>Opens on one instruction, large: sit down, feet on the floor. Next, and next, and next.</li>
+    <li>Shows the plan you wrote, in the order you wrote it, in one tap.</li>
+    <li>Keeps four, six, ten contacts — each one a tap to dial, each number exactly as you typed it.</li>
+    <li>Prints a card you can keep in a wallet, which does not need the app or a battery.</li>
+  </ul>
+
+  <h2>What it will not do</h2>
+  <ul>
+    <li><strong>Assess, triage or decide whether you are in danger.</strong> It says so above everything, every time.</li>
+    <li><strong>Stand in for a crisis line.</strong> The numbers are shown first, and labelled as bundled so you check them.</li>
+    <li><strong>Correct a number you typed.</strong> It is stored as entered and marked “as entered by you”.</li>
+    <li><strong>Hide, grey out or reset anything after time away.</strong> A month, a year — the same content, in the same order.</li>
+    <li><strong>Need the network, an account or a password.</strong> The one moment it is needed is the moment a password will not be remembered.</li>
+    <li><strong>Give medical advice or a diagnosis.</strong> One grounding step at a time, nothing else.</li>
+  </ul>
+
+  <h2>When things go wrong</h2>
+  <table>
+    <tr><th>Case</th><th>What happens</th></tr>
+    <tr><td>Bad input</td><td>A step with no text is refused. A contact with no name or no number is refused. A number the app cannot validate is kept exactly as typed, marked “as entered by you”.</td></tr>
+    <tr><td>No network</td><td>Nothing changes — and nothing on the path to the plan needs a request.</td></tr>
+    <tr><td>Storage full or unavailable</td><td>The app says <strong>NOT SAVED</strong> immediately and blocks the close, because a plan that looks saved and is not is dangerous.</td></tr>
+    <tr><td>Corrupt saved state</td><td>Reported on the front screen and offered for export. The app never opens an empty plan in its place, and tells you the printed card still works.</td></tr>
+  </table>
+
+  <h2>How to run it</h2>
+  <ul>
+    <li><strong>Here</strong>: <a href="play/index.html">play/index.html</a>, or install it from your browser's menu.</li>
+    <li><strong>Offline file</strong>: open <code>docs/play/index.html</code> straight from disk.</li>
+    <li><strong>Tests</strong>: <code>node tests/self-tests.js</code> — the spec's countable “done means” is asserted there.</li>
+  </ul>
+
+  <footer>
+    PolyForm Noncommercial 1.0.0 · (c) 2026 Dr Sohil Momin ·
+    <a href="https://github.com/drsamonline/app-open-when-bad">source</a>
+  </footer>
+</main>
+</body>
+</html>

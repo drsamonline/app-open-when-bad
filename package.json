@@ -1,0 +1,15 @@
+{
+  "name": "app-open-when-bad",
+  "version": "1.0.0",
+  "private": true,
+  "description": "One grounding step at a time, and the safety plan you wrote in a calm moment — openable in one action, offline, with no login. Not a crisis service.",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "author": "Dr Sohil Momin",
+  "scripts": {
+    "test": "node tests/self-tests.js && node tests/page-smoke.js && node tests/ui-tests.js",
+    "test:engine": "node tests/self-tests.js",
+    "test:shape": "node tests/page-smoke.js",
+    "test:ui": "node tests/ui-tests.js"
+  },
+  "devDependencies": { "jsdom": "^24.0.0" }
+}
