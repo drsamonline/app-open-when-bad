@@ -199,7 +199,8 @@ section("failure case — no network, and nothing on the path needs one");
   ok("no fetch call in " + f, !/\bfetch\s*\(/.test(src));
   ok("no XHR/WebSocket/beacon in " + f, !/XMLHttpRequest|WebSocket|sendBeacon|EventSource/.test(src));
 });
-ok("no external link on the page at all except the repo and builds", !/https?:\/\/(?!github\.com\/drsamonline)/.test(page));
+/* this project's own URLs only: the repo, its builds, and the sponsor page */
+ok("no external link on the page at all except the repo and builds", !/https?:\/\/(?!github\.com\/(drsamonline|sponsors\/drsamonline))/.test(page));
 
 section("export — the printed card survives the app");
 var card = N.printableCard(plan, { when: "25/11/2026" });
